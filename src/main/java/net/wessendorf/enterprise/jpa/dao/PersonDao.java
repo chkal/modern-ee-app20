@@ -19,13 +19,13 @@ import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import org.apache.myfaces.extensions.cdi.jpa.api.Transactional;
-
 import net.wessendorf.enterprise.beans.Person;
+
+import org.apache.myfaces.extensions.cdi.jpa.api.Transactional;
 
 public class PersonDao
 {
@@ -70,7 +70,7 @@ public class PersonDao
     return q.getResultList();
   }
 
-  @PersistenceContext(unitName = "simpleModernEEApplication")
+  @Inject
   protected EntityManager em;
 
   private final String QUERY_BY_LASTNAME = "select p from Person p where lower(p.lastname) LIKE :lastnameParam";
