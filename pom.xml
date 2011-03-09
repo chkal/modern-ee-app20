@@ -136,7 +136,15 @@
       <scope>compile</scope>
     </dependency>
 
+    <!-- Weld -->
+    <dependency>
+      <groupId>org.jboss.weld.servlet</groupId>
+      <artifactId>weld-servlet</artifactId>
+      <version>1.0.1-Final</version>
+    </dependency>
+
     <!-- Apache OpenWebBeans -->
+    <!-- 
     <dependency>
       <groupId>org.apache.openwebbeans</groupId>
       <artifactId>openwebbeans-impl</artifactId>
@@ -167,6 +175,7 @@
       <artifactId>openwebbeans-spi</artifactId>
       <version>${openwebbeans.version}</version>
     </dependency>
+     -->
 
     <!-- Apache OpenJPA -->
     <dependency>
